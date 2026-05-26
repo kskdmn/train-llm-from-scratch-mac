@@ -1,5 +1,11 @@
 # kskdmn Notes
 
+
+## Environment
+
+- MacBook Air M5 (Probably M2 or later works.)
+
+
 ## Installing the notebook output stripper
 
 Run this command once after cloning the repository:
