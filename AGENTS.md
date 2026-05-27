@@ -1,0 +1,2 @@
+- Always use `uv run` to run a Python file.
+- In this repo, do NOT add fallback logic because it can make the code complicated. If something raises an error, just write an error log.
