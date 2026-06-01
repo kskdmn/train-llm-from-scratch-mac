@@ -1,5 +1,4 @@
-See [README_kskdmn.md](./README_kskdmn.md) to know about this repository.
-
+See [README_mac.md](./README_mac.md) to know about this repository.</br></br></br>
 
 ![main image](https://cdn-images-1.medium.com/max/5200/1*r99Hq3YBd5FTTWLNYKKvPw.png)
 

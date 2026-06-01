@@ -2,10 +2,10 @@
 
 # Define vocabulary size and transformer configuration (3 Billion)
 VOCAB_SIZE = 50304          # Number of unique tokens in the vocabulary
-CONTEXT_LENGTH = 512        # Maximum sequence length for the model
-N_EMBED = 2048              # Dimension of the embedding space
-N_HEAD = 16                 # Number of attention heads in each transformer block
-N_BLOCKS = 64               # Number of transformer blocks in the model
+CONTEXT_LENGTH = 128        # Maximum sequence length for the model (original: 512)
+N_EMBED = 128               # Dimension of the embedding space (original: 2048)
+N_HEAD = 8                 # Number of attention heads in each transformer block (original: 16)
+N_BLOCKS = 1               # Number of transformer blocks in the model (original: 64)
 
 # Paths to training and development datasets
 TRAIN_PATH = "data/train/pile_train.h5"  # File path for the training dataset
@@ -23,7 +23,7 @@ T_LR_DECAYED = 5e-5        # Learning rate after decay
 T_OUT_PATH = "models/transformer_B.pt"  # Path to save the trained model
 
 # Device configuration
-DEVICE = 'cuda'
+DEVICE = 'mps'
 
 # Store all configurations in a dictionary for easy access and modification
 default_config = {

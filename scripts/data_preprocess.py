@@ -45,7 +45,7 @@ def process_files(input_dir: str, output_file: str, tokenizer_name: str, max_dat
                 # Open the compressed .jsonl.zst file for reading
                 with zstd.open(in_file, 'rt', encoding='utf-8') as in_f:
                     # Iterate over each line in the file
-                    for line in tqdm(in_f, desc=f"Processing {filename}", total=max_data if max_data is not None else None):
+                    for line_number, line in enumerate(tqdm(in_f, desc=f"Processing {filename}", total=max_data if max_data is not None else None), start=1):
                         try:
                             # Parse the line as JSON
                             data = json.loads(line)
@@ -65,13 +65,13 @@ def process_files(input_dir: str, output_file: str, tokenizer_name: str, max_dat
                                 start_index = end_index  # Update the start index
                             else:
                                 # Warn if 'text' key is missing in the JSON object
-                                print(f"Warning: 'text' key missing in line from {filename}")
+                                print(f"Warning: 'text' key missing in line {line_number} from {filename}")
                         except json.JSONDecodeError:
                             # Handle JSON decoding errors
-                            print(f"Warning: Could not decode JSON from line in {filename}")
+                            print(f"Warning: Could not decode JSON from line {line_number} in {filename}")
                         except Exception as e:
                             # Handle any other errors
-                            print(f"An error occurred while processing line in {filename}: {e}")
+                            print(f"An error occurred while processing line {line_number} in {filename}: {e}")
 
                         processed_lines += 1
                         # Stop processing if max_data limit is reached
