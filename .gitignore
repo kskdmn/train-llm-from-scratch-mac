@@ -4,3 +4,4 @@ out_notebook_scratch/
 data/
 tmp/
 tests/
+__pycache__/
