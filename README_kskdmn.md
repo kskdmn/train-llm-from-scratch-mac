@@ -3,7 +3,7 @@
 
 ## Environment
 
-- MacBook Air M5 (Probably M2 or later works.)
+- MacBook Air M5 24GB (Probably M2 or later works.)
 
 
 ## Installing the notebook output stripper
