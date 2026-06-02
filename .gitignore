@@ -1,2 +1,7 @@
+.DS_Store
 dataset_notebook_scratch/
 out_notebook_scratch/
+data/
+tmp/
+tests/
+__pycache__/
